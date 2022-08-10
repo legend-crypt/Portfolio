@@ -89,35 +89,15 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Konadu Lord</h1>
-        <p class="lead text-muted">Hi My Name Is Lord And I Enjoy Making Website And Working With Networking Devices</p>
+        <h1 class="fw-light">SKILL DETAIL</h1>
+        <p class="lead text-muted">{{page.summary}}</p>
+        <img src="{{page.image.url}}" height="300" width="300"></img>
         <p>
-          <a href="mailto:konadulordkonadu@gmail.com" target="_blank" class="btn btn-primary my-2">Mail Me</a>
-          <a href="https://twitter.com/konadulord" target="_blank" class="btn btn-light">Follow Me Twitter</a>
-          <a href="https://www.linkedin.com/in/lord-konadu-80100521a" target="_blank" class="btn btn-info">LinkedIn</a>
+          <a href="{% url 'home' %}"class="btn btn-primary my-2">Back</a>
         </p>
-        <img src="{% static 'mypic.jpg' %}" height=700></img>
       </div>
     </div>
   </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        {%for page in pages.all%}
-        <div class="card mb-4 shadow-sm">
-          <a href="{%url 'detail' page.id %}">
-          <img src="{{ page.image.url}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">{{page.summary}}</p>
-          </div>
-        </a>
-        </div>
-        {%endfor%}
-      </div>
-    </div>
-  </div>
 
 </main>
 
